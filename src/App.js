@@ -10,13 +10,13 @@ function App() {
           <Header/>
       </header>
 
-      <div className = "Body">
+      <div>
           <Body/>
       </div>
 
-      <div className = "Footer">
+      <footer>
           <Footer/>
-      </div>
+      </footer>
     </div>
   );
 }
