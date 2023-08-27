@@ -1,4 +1,4 @@
-import '../../css/Body/body-left-top-Adv.scss'
+import '../../../../css/Body/body-left-top-Adv.scss'
 import React from 'react'
 
 function TopAdv(){

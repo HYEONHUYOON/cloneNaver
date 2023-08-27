@@ -1,5 +1,5 @@
-import '../../css/Body/body.scss'
-import '../../css/Body/body-login.scss'
+import '../../../../css/Body/body.scss'
+import '../../../../css/Body/body-login.scss'
 import React, { useState } from 'react'
 
 function Login(){

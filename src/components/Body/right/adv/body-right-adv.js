@@ -1,4 +1,4 @@
-import '../../css/Body/body-right-Adv.scss'
+import '../../../../css/Body/body-right-Adv.scss'
 import React from 'react'
 
 function RightAdv(){
