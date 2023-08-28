@@ -1,9 +1,9 @@
 import '../../../../css/Body/body-left-news.scss'
-import Stand from './midde-Contents-Modules/stand'
-import Edit from './midde-Contents-Modules/edit'
-import Enter from './midde-Contents-Modules/enter'
-// import Sports from './middle-Contents-Modules/sports'
-// import Economic from './middle-Contents-Modules/economic'
+import Stand from './middle-Contents-Modules/stand'
+import Edit from './middle-Contents-Modules/edit'
+import Enter from './middle-Contents-Modules/enter'
+import Sports from './middle-Contents-Modules/sports'
+import Economic from './middle-Contents-Modules/economic'
 
 import React, { useState } from 'react'
 
@@ -13,8 +13,8 @@ function MiddleContent(props){
             case 'Stand' : return <Stand/>;
             case 'Edit' : return <Edit/>;
             case 'Enter' : return <Enter/>;
-            // case 'Sports' : return <Sports/>;
-            // case 'Economic' : return <Economic/>;
+            case 'Sports' : return <Sports/>;
+            case 'Economic' : return <Economic/>;
             default : break;
         }
     }

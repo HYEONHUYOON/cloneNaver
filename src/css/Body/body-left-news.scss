@@ -21,6 +21,17 @@
     color: inherit; 
 }
 
+#dot::before{
+    content: '\00B7';
+    color: rgba(158, 158, 158, 0.635);
+    margin: 0px 6px;
+
+    font-weight: 900;
+
+    display: inline-block;
+    text-decoration: none;
+}
+
 #underLine{
     :hover{
         text-decoration: underline;
@@ -103,17 +114,6 @@
 
         display: flex;
         flex : 1;
-
-        #dot::before{
-            content: '\00B7';
-            color: rgba(158, 158, 158, 0.635);
-            margin: 0px 6px;
-
-            font-weight: 900;
-
-            display: inline-block;
-            text-decoration: none;
-        }
 
         #triangle-Icon{
             @extend .sp-bg;
@@ -433,10 +433,11 @@
             }
 
             #content-left{
-                margin-right: 16px;
+                margin-right: 20px;
             }
 
             #content-right{
+                margin-top: 9px;
                 position: relative;
             }
 
@@ -451,7 +452,8 @@
                 text-decoration: none;
             }
             
-            #frame{
+            #content-Box-frame{
+
                 .hover-false{
                     @extend .delete-LinkOptions;
                 }
@@ -480,13 +482,19 @@
                 }
 
                 #content-Box{
-                    //background-color: green;
+                    display: block;/* 블록태그로 만들어준다 */
                     margin-left: 16px;
                     padding: 13px 0px;
-
                     width: 300px;
 
                     #content{
+                        width: 178px;
+                        display: block;
+
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                        height: 47px;
                         margin-top: 5px;
                         padding-bottom: 6px;
                         text-align: left;
@@ -501,7 +509,7 @@
                         width: 184px;
                         color: rgb(96, 96, 96);
                         font-size: 13px;
-                        font-weight: 700;
+                        font-weight: 600;
 
                         position: relative;
                         display: flex;
@@ -517,31 +525,32 @@
 
                             background-position: 0px 0px;
                             
-                            position: relative;
+                            position: absolute;
+
+                            top :3px;
+                            right: 8px;
                             
                             float: right;
-                            width: 10px;
-                            height: 15px;
-
-                            // padding: 5px;
+                            width: 11px;
+                            height: 19px;
 
                             color: #e2458f;
 
-                            // margin: -2px 5px 0 0;
+                            margin: -2px 5px 0 0;
 
                             .num{
                                 background-repeat: repeat-x;
                                 text-align: center;
-                                min-width: 9px;
+                                position: relative;
+                                right: 3px;
                             }
 
                             float: left;
                             line-height: 15px;
-                            font-size: 10px;
+                            font-size: 11px;
                             font-family: Helvetica,Arial,'나눔고딕',NanumGothic,'맑은 고딕',Malgun Gothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif;
                             white-space: nowrap;
                             background-repeat: repeat-x;
-                            background-position: 0 0;
                         }
 
                         #icon::before{
@@ -549,41 +558,814 @@
 
                             background-position: 0px -20px; 
                             width: 4px;
+                            height: 19px;
+
+                            position: relative;
+                            right: 4px;
+
+                            margin-bottom: -2px;
+                            padding-bottom: 2px;
+
+                            display: inline-block;
+                            vertical-align: top;
                             height: 15px;
-
-                            //margin-bottom: -2px;
-                            //padding-bottom: 2px;
-
-                            // display: inline-block;
-                            // vertical-align: top;
-                            // height: 15px;
-                            // margin-bottom: -2px;
-                            // padding-bottom: 2px;
+                            margin-bottom: -2px;
+                            padding-bottom: 2px;
                         }
 
                         #icon::after{
                             @extend .sp_cluster;
                             
                             background-position: -6px -20px; 
-                            width: 4px;
+                            width: 5px;
+                            height: 22px;
+
+                            position: relative;
+                            left: 1px;
+
+                            margin-bottom: -2px;
+                            padding-bottom: 2px;
+
+                            display: inline-block;
+                            vertical-align: top;
                             height: 15px;
-
-                            // margin-bottom: -2px;
-                            // padding-bottom: 2px;
-
-                            // display: inline-block;
-                            // vertical-align: top;
-                            // height: 15px;
-                            // margin-bottom: -2px;
-                            // padding-bottom: 2px;
+                            margin-bottom: -2px;
+                            padding-bottom: 2px;
                         }
                     }
                 }
+
             }
 
-            #frame:hover{
+            #content-Box-frame:hover{
                 #img-Box img{
                     transform: scale(1.03);                       
+                }
+            }
+
+            ul{
+                overflow: hidden;
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 600;  
+
+                li{
+                    margin-top: 17px;
+                }
+
+                li:first-child{
+                    padding-top: 0px;
+                    margin-top: 0px;
+                }
+            }
+                 
+            #content-List-frame{
+                .hover-false{
+                    @extend .delete-LinkOptions;
+                }
+        
+                .hover-true{
+                    text-decoration: underline;
+                    @extend .delete-LinkOptions;
+                }
+
+                width: 385px;
+                display: flex;
+
+                position: relative;
+                margin: 0px auto;
+
+                padding-right: 42px;
+
+                #content{
+                    width: auto;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                #officeName{
+                              
+                    white-space: nowrap;
+                    color: rgb(96, 96, 96);
+                    font-size: 13px;
+                    font-weight: 600;  
+                }
+
+                #officeName::before{
+                    @extend #dot;
+                }
+                
+                #iconBox{
+                    position: absolute;
+                    top: -2px;
+                    right: 5px;
+                    z-index: 0;
+                    padding: 5px;
+                    text-decoration: none;
+
+                    #icon{
+                        @extend .sp_cluster;
+
+                        background-position: 0px 0px;
+                        
+                        position: relative;
+
+                        top :3px;  
+                        right: 0px;
+                        
+                        float: right;
+                        width: 11px;
+                        height: 19px;
+
+                        color: #e2458f;
+
+                        margin: -2px 5px 0 0;
+
+                        .num{
+                            background-repeat: repeat-x;
+                            text-align: center;
+                            position: relative;
+                            right: 3px;
+                        }
+
+                        float: left;
+                        line-height: 15px;
+                        font-size: 11px;
+                        font-family: Helvetica,Arial,'나눔고딕',NanumGothic,'맑은 고딕',Malgun Gothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif;
+                        white-space: nowrap;
+                        background-repeat: repeat-x;
+                    }
+
+                    #icon::before{
+                        @extend .sp_cluster;
+
+                        background-position: 0px -20px; 
+                        width: 4px;
+                        height: 19px;
+
+                        position: relative;
+                        right: 4px;
+
+                        margin-bottom: -2px;
+                        padding-bottom: 2px;
+
+                        display: inline-block;
+                        vertical-align: top;
+                        height: 15px;
+                        margin-bottom: -2px;
+                        padding-bottom: 2px;
+                    }
+
+                    #icon::after{
+                        @extend .sp_cluster;
+                        
+                        background-position: -6px -20px; 
+                        width: 5px;
+                        height: 22px;
+
+                        position: relative;
+                        left: 1px;
+
+                        margin-bottom: -2px;
+                        padding-bottom: 2px;
+
+                        display: inline-block;
+                        vertical-align: top;
+                        height: 15px;
+                        margin-bottom: -2px;
+                        padding-bottom: 2px;
+                    }
+                }
+                
+            }
+        }
+
+        #sports{
+            display: flex;
+            flex: 1;
+            
+            #content-up{
+
+            }
+
+            #content-down{
+                margin-top: 16px;
+            }
+
+            #content-left{
+                margin-right: 20px;
+            }
+
+            #content-right{
+                margin-top: 9px;
+                position: relative;
+            }
+
+            .dot::before{
+                content: '\00B7';
+                color: rgba(158, 158, 158, 0.635);
+                margin: 0px 6px;
+    
+                font-weight: 900;
+    
+                display: inline-block;
+                text-decoration: none;
+            }
+            
+            #content-Box-frame{
+
+                .hover-false{
+                    @extend .delete-LinkOptions;
+                }
+        
+                .hover-true{
+                    text-decoration: underline;
+                    @extend .delete-LinkOptions;
+                }
+
+                width: 385px;
+                height: 104px;
+                display: flex;
+
+                position: relative;
+                overflow: hidden;
+                margin: 0px auto;
+
+                #img-Box{
+                    //margin-right: 2px;
+                    img{
+                        width: 185px;
+                        height: 104px;
+                        border-radius: 5px;
+                        margin: 0px auto;
+                    } 
+                }
+
+                #content-Box{
+                    display: block;/* 블록태그로 만들어준다 */
+                    margin-left: 16px;
+                    padding: 13px 0px;
+                    width: 300px;
+
+                    #content{
+                        width: 178px;
+                        display: block;
+
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                        height: 46px;
+                        margin-top: 5px;
+                        padding-bottom: 7px;
+                        text-align: left;
+                        line-height: 21px;
+                        p{
+                            font-size: 14px;
+                            font-weight: 600;  
+                        }
+                    }
+
+                    #inform{
+                        width: 184px;
+                        color: rgb(96, 96, 96);
+                        font-size: 13px;
+                        font-weight: 600;
+
+                        position: relative;
+                        display: flex;
+
+                        flex: 1;
+                        #date{
+                            float: left;
+
+                        }
+
+                        #icon{
+                            @extend .sp_cluster;
+
+                            background-position: 0px 0px;
+                            
+                            position: absolute;
+
+                            top :3px;
+                            right: 8px;
+                            
+                            float: right;
+                            width: 11px;
+                            height: 19px;
+
+                            color: #e2458f;
+
+                            margin: -2px 5px 0 0;
+
+                            .num{
+                                background-repeat: repeat-x;
+                                text-align: center;
+                                position: relative;
+                                right: 3px;
+                            }
+
+                            float: left;
+                            line-height: 15px;
+                            font-size: 11px;
+                            font-family: Helvetica,Arial,'나눔고딕',NanumGothic,'맑은 고딕',Malgun Gothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif;
+                            white-space: nowrap;
+                            background-repeat: repeat-x;
+                        }
+
+                        #icon::before{
+                            @extend .sp_cluster;
+
+                            background-position: 0px -20px; 
+                            width: 4px;
+                            height: 19px;
+
+                            position: relative;
+                            right: 4px;
+
+                            margin-bottom: -2px;
+                            padding-bottom: 2px;
+
+                            display: inline-block;
+                            vertical-align: top;
+                            height: 15px;
+                            margin-bottom: -2px;
+                            padding-bottom: 2px;
+                        }
+
+                        #icon::after{
+                            @extend .sp_cluster;
+                            
+                            background-position: -6px -20px; 
+                            width: 5px;
+                            height: 22px;
+
+                            position: relative;
+                            left: 1px;
+
+                            margin-bottom: -2px;
+                            padding-bottom: 2px;
+
+                            display: inline-block;
+                            vertical-align: top;
+                            height: 15px;
+                            margin-bottom: -2px;
+                            padding-bottom: 2px;
+                        }
+                    }
+                }
+
+            }
+
+            #content-Box-frame:hover{
+                #img-Box img{
+                    transform: scale(1.03);                       
+                }
+            }
+
+            ul{
+                overflow: hidden;
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 600;  
+
+                li{
+                    margin-top: 17px;
+                }
+
+                li:first-child{
+                    padding-top: 0px;
+                    margin-top: 0px;
+                }
+            }
+                 
+            #content-List-frame{
+                .hover-false{
+                    @extend .delete-LinkOptions;
+                }
+        
+                .hover-true{
+                    text-decoration: underline;
+                    @extend .delete-LinkOptions;
+                }
+
+                width: 385px;
+                display: flex;
+
+                position: relative;
+                margin: 0px auto;
+
+                padding-right: 42px;
+
+                #content{
+                    width: auto;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                #officeName{
+                              
+                    white-space: nowrap;
+                    color: rgb(96, 96, 96);
+                    font-size: 13px;
+                    font-weight: 600;  
+                }
+
+                #officeName::before{
+                    @extend #dot;
+                }
+                
+                #iconBox{
+                    position: absolute;
+                    top: -2px;
+                    right: 5px;
+                    z-index: 0;
+                    padding: 5px;
+                    text-decoration: none;
+
+                    #icon{
+                        @extend .sp_cluster;
+
+                        background-position: 0px 0px;
+                        
+                        position: relative;
+
+                        top :3px;  
+                        right: 0px;
+                        
+                        float: right;
+                        width: 11px;
+                        height: 19px;
+
+                        color: #e2458f;
+
+                        margin: -2px 5px 0 0;
+
+                        .num{
+                            background-repeat: repeat-x;
+                            text-align: center;
+                            position: relative;
+                            right: 3px;
+                        }
+
+                        float: left;
+                        line-height: 15px;
+                        font-size: 11px;
+                        font-family: Helvetica,Arial,'나눔고딕',NanumGothic,'맑은 고딕',Malgun Gothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif;
+                        white-space: nowrap;
+                        background-repeat: repeat-x;
+                    }
+
+                    #icon::before{
+                        @extend .sp_cluster;
+
+                        background-position: 0px -20px; 
+                        width: 4px;
+                        height: 19px;
+
+                        position: relative;
+                        right: 4px;
+
+                        margin-bottom: -2px;
+                        padding-bottom: 2px;
+
+                        display: inline-block;
+                        vertical-align: top;
+                        height: 15px;
+                        margin-bottom: -2px;
+                        padding-bottom: 2px;
+                    }
+
+                    #icon::after{
+                        @extend .sp_cluster;
+                        
+                        background-position: -6px -20px; 
+                        width: 5px;
+                        height: 22px;
+
+                        position: relative;
+                        left: 1px;
+
+                        margin-bottom: -2px;
+                        padding-bottom: 2px;
+
+                        display: inline-block;
+                        vertical-align: top;
+                        height: 15px;
+                        margin-bottom: -2px;
+                        padding-bottom: 2px;
+                    }
+                }
+                
+            }
+        }
+
+        #economic{
+            display: flex;
+            flex: 1;
+            
+            #content-up{
+
+            }
+
+            #content-down{
+                margin-top: 16px;
+            }
+
+            #content-left{
+                margin-right: 20px;
+            }
+
+            #content-right{
+                position: relative;
+            }
+
+            .dot::before{
+                content: '\00B7';
+                color: rgba(158, 158, 158, 0.635);
+                margin: 0px 6px;
+    
+                font-weight: 900;
+    
+                display: inline-block;
+                text-decoration: none;
+            }
+
+            #line{
+                border-top: 1px solid #bbbbbb42;
+            }
+
+            #content-Box-frame{
+
+                .hover-false{
+                    @extend .delete-LinkOptions;
+                }
+        
+                .hover-true{
+                    text-decoration: underline;
+                    @extend .delete-LinkOptions;
+                }
+
+                width: 385px;
+                height: 104px;
+                display: flex;
+
+                position: relative;
+                overflow: hidden;
+                margin: 0px auto;
+
+                #img-Box{
+                    //margin-right: 2px;
+                    img{
+                        width: 185px;
+                        height: 104px;
+                        border-radius: 5px;
+                        margin: 0px auto;
+                    } 
+                }
+
+                #content-Box{
+                    display: block;/* 블록태그로 만들어준다 */
+                    margin-left: 16px;
+                    padding: 13px 0px;
+                    width: 300px;
+
+                    #content{
+                        width: 178px;
+                        display: block;
+
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                        height: 46px;
+                        margin-top: 5px;
+                        padding-bottom: 7px;
+                        text-align: left;
+                        line-height: 21px;
+                        p{
+                            font-size: 14px;
+                            font-weight: 600;  
+                        }
+                    }
+
+                    #inform{
+                        width: 184px;
+                        color: rgb(96, 96, 96);
+                        font-size: 13px;
+                        font-weight: 600;
+
+                        position: relative;
+                        display: flex;
+
+                        flex: 1;
+                        #date{
+                            float: left;
+
+                        }
+
+                        #icon{
+                            @extend .sp_cluster;
+
+                            background-position: 0px 0px;
+                            
+                            position: absolute;
+
+                            top :3px;
+                            right: 8px;
+                            
+                            float: right;
+                            width: 11px;
+                            height: 19px;
+
+                            color: #e2458f;
+
+                            margin: -2px 5px 0 0;
+
+                            .num{
+                                background-repeat: repeat-x;
+                                text-align: center;
+                                position: relative;
+                                right: 3px;
+                            }
+
+                            float: left;
+                            line-height: 15px;
+                            font-size: 11px;
+                            font-family: Helvetica,Arial,'나눔고딕',NanumGothic,'맑은 고딕',Malgun Gothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif;
+                            white-space: nowrap;
+                            background-repeat: repeat-x;
+                        }
+
+                        #icon::before{
+                            @extend .sp_cluster;
+
+                            background-position: 0px -20px; 
+                            width: 4px;
+                            height: 19px;
+
+                            position: relative;
+                            right: 4px;
+
+                            margin-bottom: -2px;
+                            padding-bottom: 2px;
+
+                            display: inline-block;
+                            vertical-align: top;
+                            height: 15px;
+                            margin-bottom: -2px;
+                            padding-bottom: 2px;
+                        }
+
+                        #icon::after{
+                            @extend .sp_cluster;
+                            
+                            background-position: -6px -20px; 
+                            width: 5px;
+                            height: 22px;
+
+                            position: relative;
+                            left: 1px;
+
+                            margin-bottom: -2px;
+                            padding-bottom: 2px;
+
+                            display: inline-block;
+                            vertical-align: top;
+                            height: 15px;
+                            margin-bottom: -2px;
+                            padding-bottom: 2px;
+                        }
+                    }
+                }
+
+            }
+
+            #content-Box-frame:hover{
+                #img-Box img{
+                    transform: scale(1.03);                       
+                }
+            }
+
+            ul{
+                overflow: hidden;
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 600;  
+                margin-top: 15px;
+
+                li{
+                    margin-top: 17px;
+                }
+
+                li:first-child{
+                    padding-top: 0px;
+                    margin-top: 0px;
+                }
+            }
+                 
+            #content-List-frame{
+                .hover-false{
+                    @extend .delete-LinkOptions;
+                }
+        
+                .hover-true{
+                    text-decoration: underline;
+                    @extend .delete-LinkOptions;
+                }
+
+                width: 385px;
+                display: flex;
+
+                position: relative;
+                margin: 0px auto;
+
+                #content{
+                    width: auto;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }     
+                
+            }
+
+            #head-line{
+                margin-top: 15px;
+                color: rgb(92, 92, 92);
+                font-weight: 600;
+                text-align: left;
+                font-size: 14px;
+            }
+
+            #inform-Box{
+                .hover-false{
+                    @extend .delete-LinkOptions;
+                }
+        
+                .hover-true{
+                    text-decoration: underline;
+                    @extend .delete-LinkOptions;
+                }
+
+                display: flex;
+                margin-bottom: 15px;
+
+                #economic-Inform{
+                    text-align: left;
+                    
+                    #informs{
+                        padding: 0px 26px 0px 16px;
+                        
+                        display: block;
+
+                        p{
+                            //margin-left: 16px;
+                        }
+    
+                        #name{
+                            width: 91px;
+                            font-weight: 600;
+                            font-size: 13px;
+                        }
+                        
+                        #value{
+                            width: 91px;
+                            font-weight: 600;
+                            font-size: 17px;
+                            padding: 5px 0px;
+                        }
+                    }
+
+                    #informs-lastchild{
+                        @extend #informs;
+                        padding: 0px 16px 0px 16px;
+                    }
+
+                    #incrementBox{
+                        width: 68px;
+
+                        margin-top: 4px;
+                        padding: 5px 0px;
+
+                        border-radius: 5px;
+
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 700;
+                        color: rgb(225, 58, 58);
+                        background-color: rgba(252, 234, 234, 0.74);
+                    }
+                }
+
+                #economic-Inform::before{
+                    float: left;
+                    content : "";
+                    display: inline-block;
+                    width: 2px;
+                    height: 72px;
+                    background-color: rgba(237, 112, 112);
+                    vertical-align: top;
                 }
             }
         }
