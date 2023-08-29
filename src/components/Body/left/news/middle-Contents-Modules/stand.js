@@ -1,11 +1,11 @@
 import '../../../../../css/Body/body-left-news.scss'
 import React, { useEffect, useState } from 'react'
 
-const BlueBox = ()=>{
+const BlueBox = ({MouseLeave})=>{
     const [isHover,setIsHover] = useState(-1);
 
     return(
-        <div id = 'BlueBox'>
+        <div id = 'BlueBox' onMouseLeave={()=>{MouseLeave(-1)}}>
             <a href = ' ' className={isHover === 1 ? 'hover-true':'hover-false'} onMouseEnter={()=>{setIsHover(1)}} onMouseLeave={()=>{setIsHover(-1)}}>구독</a>
             <a href = ' ' id = 'gnbStyle' className={isHover === 2 ? 'hover-true':'hover-false'} onMouseEnter={()=>{setIsHover(2)}} onMouseLeave={()=>{setIsHover(-1)}}>기사보기</a>
         </div>
@@ -39,7 +39,7 @@ function Stand(){
                 {
                     imageFiles.slice(0,6).map((image,index)=>(
                         isHover === index?
-                        <BlueBox></BlueBox>
+                        <BlueBox MouseLeave = {setIsHover}></BlueBox>
                         :
                         <div id = 'office-icon' onMouseEnter={()=>{setIsHover(index)}} onMouseLeave={()=>{setIsHover(-1)}}>
                             <a>
@@ -53,7 +53,7 @@ function Stand(){
                 {
                     imageFiles.slice(6,12).map((image,index)=>(
                         isHover === index+6 ?
-                        <BlueBox></BlueBox>
+                        <BlueBox MouseLeave = {setIsHover}></BlueBox>
                         :
                         <div id = 'office-icon' onMouseEnter={()=>{setIsHover(index+6)}} onMouseLeave={()=>{setIsHover(-1)}}>
                             <a>
@@ -67,7 +67,7 @@ function Stand(){
                 {
                     imageFiles.slice(12,18).map((image,index)=>(
                         isHover === index+12 ?
-                        <BlueBox></BlueBox>
+                        <BlueBox MouseLeave = {setIsHover}></BlueBox>
                         :
                         <div id = 'office-icon' onMouseEnter={()=>{setIsHover(index+12)}} onMouseLeave={()=>{setIsHover(-1)}}>
                             <a>
@@ -81,7 +81,7 @@ function Stand(){
                 {
                     imageFiles.slice(18,24).map((image,index)=>(
                         isHover === index+18 ?
-                        <BlueBox></BlueBox>
+                        <BlueBox MouseLeave = {setIsHover}></BlueBox>
                         :
                         <div id = 'office-icon' onMouseEnter={()=>{setIsHover(index+18)}} onMouseLeave={()=>{setIsHover(-1)}}>
                             <a>
