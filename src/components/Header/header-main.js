@@ -7,9 +7,11 @@ import MenuArea from './header-menu';
 function Header(){
     return(
         <div className = 'header'>
-            <Bar/>
-            <SearchArea/>
-            <MenuArea/>
+            <div id = 'inner'>
+                <Bar/>
+                <SearchArea/>
+                <MenuArea/>
+            </div>
         </div>
     )
 }
