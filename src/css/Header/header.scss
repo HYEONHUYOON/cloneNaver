@@ -26,6 +26,8 @@
     max-width: 1280px;
     min-width: 1280px;
 
+    padding: 0px 29px;
+
     box-sizing : border-box;
     box-sizing : content-box;
 
@@ -141,58 +143,55 @@
         margin-top: 27px;
         margin-right: 30px;
     }
+}
 
-    #iconPanel{
+#iconPanel{
+    position: relative;
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50px;
+
+    background-color: rgba(0, 0, 0, 0.047);
+
+    .panel-Arrow{
+        @extend .sp-bg; 
+        background-position: -124px -154px;
+
+        width: 20px;
+        height: 11px;
+
+        transform: scaleY(-1);
+        
         position: absolute;
-        width: 45px;
-        height: 45px;
+        top :40px;
+        left: 12px;
+    }
 
-        left: -10px;
-        top :-10px;
+    .panel-Box{
+        width: 80px;
+        height: 40px;
 
-        border-radius: 50px;
+        border-radius: 45px;
+        border-style:solid;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-right-width: 1px;
+        border-left-width: 1px;
+        border-color: rgb(4, 195, 36);
 
-        background-color: rgba(0, 0, 0, 0.047);
+        position: relative;
+        // top:50px;
+        // left: -18px;
 
-        .panel-Arrow{
-            @extend .sp-bg; 
-            background-position: -124px -154px;
-
-            width: 20px;
-            height: 11px;
-
-            transform: scaleY(-1);
-            
-            position: absolute;
-            top :40px;
-            left: 12px;
-        }
-
-        .panel-Box{
-            width: 80px;
-            height: 40px;
-
-            border-radius: 45px;
-            border-style:solid;
-            border-top-width: 1px;
-            border-bottom-width: 1px;
-            border-right-width: 1px;
-            border-left-width: 1px;
-            border-color: rgb(4, 195, 36);
-
-            position: absolute;
-            top:50px;
-            left: -18px;
-
-            box-shadow:0px 0.8px 0.8px 0.8px #a8a8a853;
-            p{
-                font-size: 13px;
-                text-align: center;
-                margin-top: 11.5px;
-            }
+        box-shadow:0px 0.8px 0.8px 0.8px #a8a8a853;
+        p{
+            font-size: 13px;
+            text-align: center;
+            margin-top: 11.5px;
         }
     }
-    }
+}
 
     .search{
         //background-color: aqua;
@@ -579,7 +578,7 @@
                     background-position: -32px -316px;
             
                     width: 28px;
-                    height: 25px;
+                    height: 27px;
                     position: relative;
                 }
             }
@@ -634,12 +633,12 @@
             }
         
             #iconPanel{
-                position: absolute;
+                position: relative;
                 width: 45px;
                 height: 45px;
         
                 left: -10px;
-                top :-10px;
+                top : -10px;
         
                 border-radius: 50px;
         

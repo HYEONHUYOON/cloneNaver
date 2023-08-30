@@ -12,7 +12,8 @@ function Bar(){
         <div className = 'bar'>
 
                <div id = 'shortCut' onMouseEnter = {()=>{setBarHover(true)}} onMouseLeave = {()=> {setBarHover(false)}}>
-                    {barHover ? 
+                    {barHover 
+                        ? 
                         <div className='shortCut-Button'>
                             <IconPanel content = '바로가기'/>
                         </div> : 

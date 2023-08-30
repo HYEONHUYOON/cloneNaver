@@ -1343,6 +1343,7 @@
                     }
 
                     #incrementBox{
+                        text-decoration-line: none;
                         width: 68px;
 
                         margin-top: 4px;
@@ -1435,6 +1436,10 @@
 
             .font-Blue{
                 color: rgb(46, 91, 226);
+            }
+
+            .font-Green{
+                color: rgb(0, 143, 118);
             }
 
             .font-Pink{
