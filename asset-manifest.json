@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cloneNaver/static/css/main.aab9fb38.css",
+    "main.js": "/cloneNaver/static/js/main.0ea8f985.js",
+    "static/js/787.a4b21108.chunk.js": "/cloneNaver/static/js/787.a4b21108.chunk.js",
+    "static/media/sp_main.89f0d213.png": "/cloneNaver/static/media/sp_main.89f0d213.89f0d213232646ebad67.png",
+    "static/media/thumb00002.jpeg": "/cloneNaver/static/media/thumb00002.e1884310f9ce3d43ed6f.jpeg",
+    "static/media/_jpg": "/cloneNaver/static/media/a70e5d387313bf6b79e6_20230824142319539.7e03869749bb9aaa93b2.jpg",
+    "static/media/_png": "/cloneNaver/static/media/28aaad16ed7312aa5295_20230823172810248.f4c98893de7fda580941.png",
+    "static/media/thumb00001.jpeg": "/cloneNaver/static/media/thumb00001.bfa634076b3ec87fdb84.jpeg",
+    "static/media/thumbs00004.jpeg": "/cloneNaver/static/media/thumbs00004.fafe9988b13e4b876680.jpeg",
+    "static/media/thumbs00003.jpeg": "/cloneNaver/static/media/thumbs00003.5e3f7498942d4871175d.jpeg",
+    "static/media/thumbs00001.jpeg": "/cloneNaver/static/media/thumbs00001.869da9552ce870574915.jpeg",
+    "static/media/thumbs00002.jpeg": "/cloneNaver/static/media/thumbs00002.1d6314040fb39ae985ed.jpeg",
+    "index.html": "/cloneNaver/index.html",
+    "main.aab9fb38.css.map": "/cloneNaver/static/css/main.aab9fb38.css.map",
+    "main.0ea8f985.js.map": "/cloneNaver/static/js/main.0ea8f985.js.map",
+    "787.a4b21108.chunk.js.map": "/cloneNaver/static/js/787.a4b21108.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aab9fb38.css",
+    "static/js/main.0ea8f985.js"
+  ]
+}
